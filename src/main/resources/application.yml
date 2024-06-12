@@ -1,0 +1,7 @@
+server:
+  port: 8066
+spring:
+  application:
+    name: appointment-platform
+  profiles:
+    active: dev

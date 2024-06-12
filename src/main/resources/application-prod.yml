@@ -1,0 +1,24 @@
+server:
+  port: 8066
+spring:
+  application:
+    name: appointment-platform
+  redis:
+    port: 6379
+    password: app2024
+    database: 0
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:6661/appointment_platform?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&nullCatalogMeansCurrent=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: srzx@2022
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+wx:
+  appid: wx708f661ffdc344c3
+  appsecret: 6af89c828b787eb259c4daaff7d869cf
+  api:
+    aes256: JO33wjp7DgC0TXZ8u3P6QAA/KIf7VE/ML5UYb9kK6nM=

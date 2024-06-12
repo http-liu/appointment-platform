@@ -1,0 +1,50 @@
+server:
+  port: 8066
+spring:
+  application:
+    name: appointment-platform
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:6661/appointment_platform?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&nullCatalogMeansCurrent=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: srzx@2022
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+wx:
+  appid: wxa9004f060395e104
+  appsecret: bbee9251e4366bccde89252495242057
+  api:
+    aes256: JO33wjp7DgC0TXZ8u3P6QAA/KIf7VE/ML5UYb9kK6nM=
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+      # path: 配置swagger-ui.html/UI界面的访问路径,默认为/swagger-ui.html
+    tags-sorter: alpha
+      # tags-sorter: 接口文档中的tags排序规则,默认为alpha,可选值为alpha(按字母顺序排序)或as-is(按照在代码中定义的顺序排序)
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: ‘default’
+      paths-to-match: '/**'
+      packages-to-scan: com.appointment.controller
+
+# knife4j的增强配置，不需要增强可以不配
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+  basic:
+    enable: true
+    # Basic认证用户名
+    username: admin
+    # Basic认证密码
+    password: admin
